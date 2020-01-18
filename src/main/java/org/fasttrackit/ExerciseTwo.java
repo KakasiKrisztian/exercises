@@ -43,8 +43,9 @@ public class ExerciseTwo {
                 queryD();
                 System.out.println("Query d done");
             } else if (next.equals("e")) {
-                queryE();
-                System.out.println("Query e done");
+                    queryE();
+                    System.out.println("Query e done");
+//                    System.out.println("You can't do that right now.");
             } else if (next.equals("f")) {
                 queryF();
                 System.out.println("Query f done");
@@ -113,8 +114,8 @@ public class ExerciseTwo {
         System.out.println(size);
     }
     public void queryE(){
-        for (int i = 0; i <= list.size(); i++ ){
-            System.out.print(i + " ");
+        for (int i = 0; i < list.size(); i++ ){
+            System.out.print(list.get(i) + " ");
         }
 
     }
@@ -123,5 +124,10 @@ public class ExerciseTwo {
         Collections.sort(list, Collections.<Integer>reverseOrder());
     }
 
-
+    @Override
+    public String toString() {
+        return "ExerciseTwo{" +
+                "list=" + list +
+                '}';
+    }
 }
